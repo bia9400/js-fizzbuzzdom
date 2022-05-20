@@ -1,0 +1,31 @@
+body{
+    background-color: #083b4c;
+    color: black;
+}
+h1{
+    color: white;
+}
+.my-col{
+    width: calc(100% / 7 - 1rem);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.mygap{
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+.standard-color{
+    background-color: #1389b2;
+}
+.fizz-color{
+    background-color: #0bd6a1;
+}
+.buzz-color{
+    background-color: #ffd166;
+}
+.FizzBuzz-color{
+    background-color: #f0466f;
+}
