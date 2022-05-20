@@ -48,6 +48,7 @@ columnDecision.addEventListener("click", function(){
     let columnLayoutPrint=document.querySelector(".column-number");
     if(parseInt(columnLayoutPrint.value) <= 0 || parseInt(columnLayoutPrint.value) > 10 ){
         alert("Inserire un numero di colonne da 1 a 10")
+        columnLayoutPrint.value="7"
         for ( let i = 1; i <= 100; i++ ){
             if(i % 5 == 0 && i % 3 == 0){
                 console.log("FizzBuzz");
