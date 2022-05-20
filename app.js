@@ -15,6 +15,7 @@ Consigli del giorno:
 Buon lavoro e buon divertimento! :faccia_leggermente_sorridente: */
 
 const containerHtml=document.querySelector(".d-flex");
+const columnDecision=document.querySelector(".layout")
 let printHtml;
 let classColor;
 
@@ -42,3 +43,60 @@ for ( let i = 1; i <= 100; i++ ){
     }
     containerHtml.innerHTML += `<div class="my-col ${classColor}">${printHtml}</div>`;
 }
+columnDecision.addEventListener("click", function(){
+    containerHtml.innerHTML = ``;
+    let columnLayoutPrint=document.querySelector(".column-number");
+    if(parseInt(columnLayoutPrint.value) <= 0 || parseInt(columnLayoutPrint.value) > 10 ){
+        alert("Inserire un numero di colonne da 1 a 10")
+        for ( let i = 1; i <= 100; i++ ){
+            if(i % 5 == 0 && i % 3 == 0){
+                console.log("FizzBuzz");
+                 printHtml="FizzBuzz";
+                 classColor="FizzBuzz-color"
+            }
+            else if(i % 3 == 0){
+                console.log("Fizz");
+                 printHtml="Fizz";
+                 classColor="fizz-color"
+            }
+            else if(i % 5 == 0){
+                console.log("Buzz");
+                 printHtml="Buzz";
+                 classColor="buzz-color"
+            }
+            
+            else{
+                console.log(i);
+                printHtml=i;
+                classColor="standard-color"
+            }
+            containerHtml.innerHTML += `<div class="my-col ${classColor}">${printHtml}</div>`;
+        }
+    }
+    else{
+
+    for ( let i = 1; i <= 100; i++ ){
+        if(i % 5 == 0 && i % 3 == 0){
+            console.log("FizzBuzz");
+             printHtml="FizzBuzz";
+             classColor="FizzBuzz-color"
+        }
+        else if(i % 3 == 0){
+            console.log("Fizz");
+             printHtml="Fizz";
+             classColor="fizz-color"
+        }
+        else if(i % 5 == 0){
+            console.log("Buzz");
+             printHtml="Buzz";
+             classColor="buzz-color"
+        }
+        
+        else{
+            console.log(i);
+            printHtml=i;
+            classColor="standard-color"
+        }
+        containerHtml.innerHTML += `<div class="my-col${`-${parseInt(columnLayoutPrint.value)}`} ${classColor}">${printHtml}</div>`;
+    }
+}})
